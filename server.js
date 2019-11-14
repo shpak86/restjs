@@ -7,7 +7,7 @@ const mongoHost = "127.0.0.1";
 const mongoPort = "27017";
 const app = express();
 const port = 8080;
-const version = "1.3";
+const version = "1.4";
 const url = `mongodb://${mongoLogin}:${mongoPassword}@${mongoHost}}:${mongoPort}/`;
 const mongoClient = new MongoClient(url, {useNewUrlParser: true});
 let db;
@@ -19,8 +19,9 @@ mongoClient.connect(function (err, client) {
 });
 
 app.use(express.json());
+app.use(express.static('public'));
 
-app.get('/', (req, res) => res.status(200).json({message: `REST.js ${version}`}));
+app.get('/info', (req, res) => res.status(200).json({message: `REST.js ${version}`}));
 
 app.get('/storage', (req, res) => {
     storageCollection.find().toArray(function (err, result) {
