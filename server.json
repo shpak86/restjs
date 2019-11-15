@@ -1,0 +1,4 @@
+{
+  "mongo": "mongodb://mongoadmin:secret@127.0.0.1:27017",
+  "port": 8080
+}
