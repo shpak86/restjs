@@ -178,3 +178,27 @@ Body:
   "message": "String"
 }
 ```
+
+## Configure and start
+To configure server use server.json file.  
+
+`mongo` property defines connection string to MongoDB database. Format of the connection string is
+<span style="color:blue">protocol</span>
+://
+<span style="color:green">login</span>
+:
+<span style="color:red">secret</span>
+@
+<span style="color:black">127.0.0.1</span>
+:
+<span style="color:grey">27017</span>
+
+`port` property defines TCP port which listening HTTP server
+
+To start execute `node server.js` or `npm start` command.  
+To stop server kill the process.
+## Links
+[visual-restjs][visual-restjs]  
+visual-restjs WEB-interface
+
+[visual-restjs]: https://github.com/kalinichika/visual-restjs
