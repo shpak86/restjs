@@ -4,7 +4,7 @@ HTTP server for training to work with Docker containers.
 ## Description
 RESTjs is a simple HTTP server provides an API to perform CRUD operations on database documents.
 Each document contains fields `key` and `value` of `String` type. MongoDB is used as a database. 
-This project creates for training to work with Docker containers. 
+This project created for training to work with Docker containers. 
 
 ## REST API
 
@@ -21,7 +21,7 @@ Body:
 }
 ```
 
-### Get items collection
+### Get documents collection
 #### Request
 
 Type: `GET`  
@@ -32,11 +32,14 @@ Status code: `200`
 Body:
 ```json
 [
- {"key": "String", "value": "String"}
+    {
+      "key": "String",
+      "value": "String"
+    }
 ]
 ```
 
-### Get item by key
+### Get document by key
 #### Request
 
 Type: `GET`  
@@ -46,14 +49,19 @@ Path: `/storage/:key`
 Status code: `200`  
 Body:
 ```json
- {"key": "String", "value": "String"}
+{
+  "key": "String",
+  "value": "String"
+}
 ```
 
-#### Item not found response
+#### Document not found response
 Status code: `404`  
 Body:
 ```json
- {"message": "String"}
+{
+  "message": "String"
+}
 ```
 
 ### Add new document
